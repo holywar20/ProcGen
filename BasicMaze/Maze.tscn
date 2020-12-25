@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://iso_roads.tres" type="TileSet" id=1]
+[ext_resource path="res://TileMap.gd" type="Script" id=2]
+
+[node name="Maze" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+mode = 1
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 100, 50 )
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+format = 1
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Camera2D" type="Camera2D" parent="TileMap"]
+current = true
